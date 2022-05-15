@@ -1,0 +1,65 @@
+body{
+    box-sizing: border-box;
+}
+
+.nav a{
+    transition: all 0.4s ease-in-out;
+}
+.nav a:hover{
+ color: #000 !important;
+ background-color: #fff;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.backDrop{
+    background-color: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+.drawer{
+    background-color: #fff;
+    width: 60%;
+    height: 100%;
+    position:absolute;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(0px)
+}
+.drawer.activeTransition{
+    transform: translateX(-500px);
+}
+
+.sub_routes{
+    width:200px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+.submenus:hover .sub_routes{
+    visibility: visible;
+    opacity: 1;
+}
+@media (min-width: 768px){
+    .menu, .backDrop, .drawer{
+        display: none;
+    }
+
+  
+}
+
+@media (max-width: 768px){
+    .nav-items{
+        display: none;
+    }.login{
+        display: none;
+    }
+}
